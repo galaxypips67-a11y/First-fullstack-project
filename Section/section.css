@@ -1,0 +1,17 @@
+h1{
+   color: white;
+}
+
+#section{
+   width: 100%;
+   text-align: center;
+   margin-top: 50px;
+   
+}
+
+button:hover{
+   color: brown;
+   cursor: pointer;
+    font-size: 20px;
+
+}
