@@ -1,23 +1,13 @@
+
 h1{
-   color: white;
+   color: brown;
 }
 
 
-
-
-#section{
+#Section{
+   border: solid yellow 4px;
    text-align: center;
+   background-image: url('/images/photo-150.avif');
    padding-top: 200px;
-   background: url("/images/photo-150.avif");
    background-size: cover;
-   
- }
-
-
-
-button:hover{
-   color: brown;
-   cursor: pointer;
-    font-size: 20px;
-
 }
