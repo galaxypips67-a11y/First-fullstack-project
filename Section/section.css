@@ -1,5 +1,6 @@
 :root{
    --primarysection: #0B1F33;
+   --secondarysection: #C2C4C3;
 }
 
 
@@ -25,7 +26,8 @@
 
 
 .button-sections:hover{
-   color: brown;
+  background-color: var(--primarysection);
+  color: var(--secondarysection);
    cursor: pointer;
    font-size: 30px;
 }
