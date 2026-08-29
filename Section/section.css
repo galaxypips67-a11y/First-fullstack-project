@@ -7,7 +7,7 @@ h1{
 #Section{
    border: solid yellow 4px;
    text-align: center;
-   background-image: url('/images/photo-150.avif');
+   background-image: url("/images/photo-150.avif");
    padding-top: 200px;
    background-size: cover;
 }
