@@ -3,6 +3,10 @@
    --secondarysection: #C2C4C3;
 }
 
+.section-header{
+   margin-bottom: -10px;
+}
+
 
 
 #Section{
@@ -12,6 +16,7 @@
   padding-top: 150px;
    background-size: cover;
    background-position:center;
+
 }
 
 
