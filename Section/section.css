@@ -2,11 +2,18 @@ h1{
    color: white;
 }
 
+
+
+
 #section{
    text-align: center;
    padding-top: 200px;
+   background: url("/images/photo-150.avif");
+   background-size: cover;
+   
+ }
 
-}
+
 
 button:hover{
    color: brown;
