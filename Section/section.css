@@ -1,6 +1,7 @@
 :root{
-   --primarysection: #0B1F33;
-   --secondarysection: #C2C4C3;
+   --primarysection: rgb(11, 31, 51);
+   --secondarysection: rgb(194, 196, 195);
+   --tertiarysection:rgb(212, 196, 181);
 }
 
 .section-header{

@@ -1,3 +1,18 @@
 #Aboutme-section{
     text-align: center;
 }
+
+.Aboutme-awesome{
+    font-size:35px;
+    margin-top: 30px;
+}
+
+.aboume-icon{
+    margin: 10px;
+    color: var(--secondarysection);
+}
+
+.aboume-icon:hover{
+    cursor: pointer;
+    color: var(--tertiarysection);
+}
