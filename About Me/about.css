@@ -17,3 +17,14 @@
     cursor: pointer;
     color: var(--tertiarysection);
 }
+
+.Aboutme-awesome a {
+    color: var(--secondarysection) ;
+    
+
+}
+
+.Aboutme-awesome a:hover{
+    cursor: pointer;
+    color: var(--tertiarysection);
+}
