@@ -32,8 +32,16 @@
   </div>
   <div class="crap-games">
   <div class="main-sectn" id="craps-game">
-   <h1 class="crap-head">Craps Casino Game</h1>
-   <div class="craps-container"></div>
+   <h1 class="crap-head"> Craps Casino Game</h1>
+   <div class="craps-container">
+      <div class="craps-registration-pane">
+         <div>Enter username to begin</div>
+          <div>
+           <input class="craps-registration-input" id="craps-game2026">
+         </div>
+         <div class="craps-registration-continue" onclick="crapsgame()">continue</div>
+      </div>
+   </div>
   </div>
   </div>
 
@@ -93,8 +101,13 @@ padding: 25px;
 
 <script>
 
-   function GraceofGod(){
+   function GraceofGod () {
       document.body.style.background = 'url("https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUya21iYnFwdm55emVybWZ5anNwbHl1MGxxcHFpZmI1MTRxemRqdzlvMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xTiTnxpQ3ghPiB2Hp6/giphy.gif")';
       document.getElementById("Section").style.visibility = "hidden";
+      }
+
+
+      function crapsgame() {
+         let crapsusername = (document.getElementById("craps-game2026").value)
       }
 </script>

@@ -13,11 +13,42 @@
 
 .craps-container{
     width: min(500px, 80vw);
-    height: min(350px, 80vh);
+    height: min(350px, 70vw);
     border: 2px solid white;
      margin: 60px auto 0 auto;
-    background-image: url('/images/photo-4500.avif');
+    background-image: url('/images/premium_5.avif');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
    
+}
+
+.craps-registration-pane{
+    text-align: center;
+    margin-top: 25px;
+    
+}
+
+.craps-registration-input{
+    background: none;
+    border: none;
+    border-bottom: solid white 1px;
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+   
+
+}
+
+.craps-registration-input:focus{
+    outline: 0;
+}
+
+.craps-registration-continue{
+    margin-top: 25px;
+    
+}
+
+.craps-registration-continue:hover{
+    cursor: pointer;
+    font-weight: bold;
 }
