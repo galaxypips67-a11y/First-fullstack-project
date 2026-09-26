@@ -22,7 +22,7 @@
    
 }
 
-.craps-registration-pane{
+#craps-registration-pane{
     text-align: center;
     margin-top: 25px;
     
@@ -51,4 +51,8 @@
 .craps-registration-continue:hover{
     cursor: pointer;
     font-weight: bold;
+}
+
+#Crapsgame-Mainsection{
+    display: none;
 }
