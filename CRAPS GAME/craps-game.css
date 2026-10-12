@@ -56,3 +56,24 @@
 #Crapsgame-Mainsection{
     display: none;
 }
+
+
+
+.Craps-game-section{
+    text-align: center;
+    margin-top: 45px;
+}
+
+.CrapsMoneyContainer{
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+
+.Crapswelcomesection{
+    margin-top: -30px;
+}
+
+.CrapsRoundssection{
+    margin-top: 30px;
+}

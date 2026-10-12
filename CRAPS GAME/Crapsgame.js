@@ -1,25 +1,32 @@
+///Craps Game MAIN Data
+let crapsusername  = ""
+
+
+///Graps Game settings
+const  startingMoney =  1000
+const startingRounds = 0
+
+///Graps HTML IDS
+
 const crapsusernameinput = "craps-game2026"
 const crapsRegistrationpane = "craps-registration-pane"
 const crapsgamemainsection ="Crapsgame-Mainsection"
+const crapstartMoney = "Moneycontainer"
+const CrapsRounds =  "CrapsRoundssection"
 
 
-
-
+///Graps Input user
       function crapsgame() {
-         let crapsusername = (document.getElementById(crapsusernameinput).value)
-       
-
-
-         
-
-        let crapsfirtchar = /^[0-9]|[^a-zA-Z0-9]/g 
+        crapsusername = (document.getElementById(crapsusernameinput).value)
+        let crapsfirstcharacter= /^[0-9]|[^a-zA-Z0-9._]/g 
         
-        if (crapsusername.length < 5 || crapsfirtchar.test(crapsusername) ){
+        if (crapsusername.length < 5 || crapsfirstcharacter.test(crapsusername) ){
          alert("Username must be at least 5 characters long, alphanumeric and underscore, no spaces. And must not start with a number")
 
         }else{ 
         removeRegistrationpane ()
         Showmaingamesection () 
+        crapsgamesetting()
       }}
 
       function removeRegistrationpane () {
@@ -29,4 +36,19 @@ const crapsgamemainsection ="Crapsgame-Mainsection"
 
       function Showmaingamesection () {
           document.getElementById(crapsgamemainsection).style.display = "block"
+      }
+
+
+      function crapsgamesetting(){
+         document.getElementById("CrapsUsercontainer").innerHTML =  crapsusername
+          setmoney(startingMoney)
+          setrounds(startingRounds)
+      }
+
+      function setmoney(money){
+         document.getElementById("Moneycontainer").innerHTML = money
+      }
+
+      function setrounds(rounds){
+         document.getElementById("crapsroundsettings").innerHTML = rounds
       }
