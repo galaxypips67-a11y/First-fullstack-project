@@ -1,10 +1,19 @@
 ///Craps Game MAIN Data
+
 let crapsusername  = ""
 
 
 ///Graps Game settings
-const  startingMoney =  1000
+
+const  startingMoney =  1000 //Stores the Game settings to initial deposit and rounds
 const startingRounds = 0
+
+//In-Game Variables
+let currentMoney = startingMoney
+let currentrounds = startingRounds //Runs when the Page loads for the first time
+
+
+
 
 ///Graps HTML IDS
 
@@ -41,8 +50,10 @@ const CrapsRounds =  "CrapsRoundssection"
 
       function crapsgamesetting(){
          document.getElementById("CrapsUsercontainer").innerHTML =  crapsusername
-          setmoney(startingMoney)
-          setrounds(startingRounds)
+         currentMoney =startingMoney
+         currentrounds = startingRounds
+          setmoney(currentMoney)
+          setrounds(currentrounds)
       }
 
       function setmoney(money){
