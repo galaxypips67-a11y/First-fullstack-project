@@ -30,6 +30,7 @@
     background-image: url('/images/premium_5.avif');
     background-size: cover;
     background-position: center top;
+    position: relative;
    
 }
 
@@ -86,4 +87,13 @@
 
 .CrapsRoundssection{
     margin-top: calc(var(--height-scale-)*0.14);
+}
+
+.Crap-setup-Manager{
+    border: 2px solid blue;
+    width:100%;
+    bottom: calc(var(--height-scale-)*0.02);
+    position: absolute;
+    text-align: center;
+    font-size: calc(var(--height-scale-)*0.06);
 }
