@@ -1,3 +1,12 @@
+:root{
+    --width-scale-: min(700px, 80vw);
+    --height-scale-: calc(var(--width-scale-)*0.714);
+    --crapstitle-: clamp(16px, calc(var(--height-scale-) * 0.06), 30px);
+    --marginbottom-tittle: calc(var(--height-scale)*0.1);
+}
+
+
+
 #craps-game{
     background-image: url(../images/casinoimg.jpg);
     color: white;
@@ -8,14 +17,16 @@
 
 .crap-head{
     text-align: center;
-    margin-top: 40px;
+    margin-top: calc((100vh - var(--crapstitle-) - var(--marginbottom-tittle) -  var(--height-scale-))/2);
+    font-size: var(--crapstitle-);
+    margin-bottom: var(--marginbottom-tittle);
 }
 
 .craps-container{
-    width: min(500px, 80vw);
-    height: min(350px, 70vw);
+    width: var(--width-scale-);
+    height: var(--height-scale-);
     border: 2px solid white;
-     margin: 60px auto 0 auto;
+     margin: 40px auto ;
     background-image: url('/images/premium_5.avif');
     background-size: cover;
     background-position: center top;
@@ -24,7 +35,8 @@
 
 #craps-registration-pane{
     text-align: center;
-    margin-top: 25px;
+    margin-top: calc(var(--height-scale-)*0.12);
+    font-size: var(--crapstitle-);
     
 }
 
@@ -32,7 +44,7 @@
     background: none;
     border: none;
     border-bottom: solid white 1px;
-    margin-top: 25px;
+    margin-top: calc(var(--height-scale-)*0.07);
     text-align: center;
     color: white;
    
@@ -44,7 +56,7 @@
 }
 
 .craps-registration-continue{
-    margin-top: 25px;
+    margin-top: calc(var(--height-scale-)*0.07);
     
 }
 
@@ -55,25 +67,23 @@
 
 #Crapsgame-Mainsection{
     display: none;
+    margin-top: calc(var(--height-scale-)*0.08);
 }
 
 
 
 .Craps-game-section{
     text-align: center;
-    margin-top: 45px;
+    margin-top:calc(var(--height-scale-)*0.07);
 }
 
 .CrapsMoneyContainer{
-    margin-top: 60px;
-    font-size: 30px;
+    margin-top:calc(var(--height-scale-)*0.20) ;
+    font-size:var(--crapstitle-)
 }
 
 
-.Crapswelcomesection{
-    margin-top: -30px;
-}
 
 .CrapsRoundssection{
-    margin-top: 30px;
+    margin-top: calc(var(--height-scale-)*0.14);
 }
