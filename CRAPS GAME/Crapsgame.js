@@ -7,11 +7,15 @@ let crapsusername  = ""
 
 const  startingMoney =  1000 //Stores the Game settings to initial deposit and rounds
 const startingRounds = 0
+const   bets = {
+   even: "EVEN",
+   odd:   "ODD"
+}                     //create the type of bets we are about to make.
 
 //In-Game Variables
 let currentMoney = startingMoney
 let currentrounds = startingRounds //Runs when the Page loads for the first time
-
+let currentbets = bets.even
 
 
 
@@ -54,6 +58,7 @@ const CrapsRounds =  "CrapsRoundssection"
          currentrounds = startingRounds
           setmoney(currentMoney)
           setrounds(currentrounds)
+          beteven()
       }
 
       function setmoney(money){
@@ -62,4 +67,23 @@ const CrapsRounds =  "CrapsRoundssection"
 
       function setrounds(rounds){
          document.getElementById("crapsroundsettings").innerHTML = rounds
+      }
+      
+
+
+      function beteven(){
+         choosebet(bets.even)
+      }
+
+
+      function betodd(){
+         choosebet(bets.odd)
+      }
+
+      function choosebet (bet){
+         currentbets = bet
+         document.getElementById(currentbets).style.backgroundColor = "red"
+         
+         const deselect = bet == bets.even ? bets.odd : bets.even
+         document.getElementById(deselect).style.backgroundColor = "transparent"
       }
