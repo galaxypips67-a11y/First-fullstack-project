@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="stylesheet" href="./CRAPS GAME/utiliti.css">
    <link rel="stylesheet" href="./CRAPS GAME/craps-game.css">
    <link rel="stylesheet" href="./CRAPS GAME/craps-game.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
@@ -49,18 +50,26 @@
                <div class="CrapsMoneyContainer">$ <span id="Moneycontainer"></span></div>
                <div class="CrapsRoundssection">Rounds: <span id="crapsroundsettings"></span></div>
             </div>
-            <div class="Crap-setup-Manager">
-               <div id="EVEN" onclick="beteven()">
+            <div class="Craps-Ontable-container">
+                  <div class="Craps-Rolldice-container non-selector">Roll dice <i class="fa-sharp-duotone fa-solid fa-dice"></i></div>
+            </div>
+            <div class="Crap-setup-Manager non-selector">
+               <div class="Craps-betting-grid non-selector">
+                   <div class="Craps-bet-button" id="EVEN" onclick="beteven()">
                   EVEN
                </div>
-               <div id="ODD" onclick=" betodd()">
+                 <div class="Craps-Gamebet-Container">
+                  <span  class="Craps-Betamount-change" onclick="decreaseBet()">-</span>
+                  <span id="Craps-User-Bet-Amount">$100</span>
+                  <span   class="Craps-Betamount-change" onclick="increaseBet()">+</span>
+               </div>
+
+               <div   class="Craps-bet-button" id="ODD" onclick=" betodd()">
                   ODD
                </div>
-               <div>
-                  <span onclick="decreaseBet()">-</span>
-                  <span id="Craps-User-Bet-Amount">$100</span>
-                  <span onclick="increaseBet()">+</span>
+             
                </div>
+            
             </div>
             </div>
    </div>

@@ -1,5 +1,5 @@
 :root{
-    --width-scale-: min(700px, 80vw);
+    --width-scale-: min(700px, 80vw,80vh);
     --height-scale-: calc(var(--width-scale-)*0.714);
     --crapstitle-: clamp(16px, calc(var(--height-scale-) * 0.06), 30px);
     --marginbottom-tittle: calc(var(--height-scale)*0.1);
@@ -79,21 +79,77 @@
 }
 
 .CrapsMoneyContainer{
-    margin-top:calc(var(--height-scale-)*0.20) ;
+    margin-top:calc(var(--height-scale-)*0.09) ;
     font-size:var(--crapstitle-)
 }
 
 
 
 .CrapsRoundssection{
-    margin-top: calc(var(--height-scale-)*0.14);
+    margin-top: calc(var(--height-scale-)*0.02);
+}
+
+.Craps-Ontable-container{
+    margin-top: calc(var(--height-scale-)*0.12);
+    text-align: center;
+    font-size: calc(var(--height-scale-)*0.04)
+
+}
+
+.Craps-Rolldice-container{
+    width:  fit-content;
+     margin: 0 auto;
+
+}
+
+
+.Craps-Rolldice-container:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .Crap-setup-Manager{
-    border: 2px solid blue;
     width:100%;
     bottom: calc(var(--height-scale-)*0.02);
     position: absolute;
     text-align: center;
-    font-size: calc(var(--height-scale-)*0.06);
+    font-size: calc(var(--height-scale-)*0.05);
+    
+}
+
+
+.Craps-betting-grid{
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    width: 80%;
+    margin: 0 auto;
+    border: solid white 1px;
+    border-radius: 4px;
+}
+
+
+.Craps-bet-button{
+    padding:calc(var(--height-scale-)*0.03);
+}
+
+.Craps-bet-button:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.Craps-Gamebet-Container{
+    padding:calc(var(--height-scale-)*0.03);
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    background: rgba(0,0,0,0.5);
+}
+
+#Craps-User-Bet-Amount{
+    margin: 0  calc(var(--height-scale-)*0.03) ;
+}
+
+.Craps-Betamount-change:hover{
+    cursor: pointer;
+    font-weight: bold;
 }

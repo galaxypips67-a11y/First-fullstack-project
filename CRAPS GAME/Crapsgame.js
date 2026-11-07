@@ -109,3 +109,5 @@ const CrapsUserBetMoney = "Craps-User-Bet-Amount"
          currentBetAmount = betmoney
          document.getElementById(CrapsUserBetMoney).innerHTML= "$" + betmoney
       }
+
+      
