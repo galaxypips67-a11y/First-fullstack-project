@@ -30,6 +30,8 @@ const crapsgamemainsection ="Crapsgame-Mainsection"
 const crapstartMoney = "Moneycontainer"
 const CrapsRounds =  "CrapsRoundssection"
 const CrapsUserBetMoney = "Craps-User-Bet-Amount"
+const dicerollElements = "Craps-rolldice-animation-container"
+const rolldicenodisplay = "Craps-rolldice-nodisplay"
 
 
 ///Graps Input user
@@ -110,4 +112,16 @@ const CrapsUserBetMoney = "Craps-User-Bet-Amount"
          document.getElementById(CrapsUserBetMoney).innerHTML= "$" + betmoney
       }
 
+
+
+      function Rolldice(){
+         document.getElementById(rolldicenodisplay).style.display  = "none"
+         const dicerollelement = document.getElementById(dicerollElements)
+         rollADie({ element: dicerollelement, numberOfDice: 2, callback:processdiceresult, delay:10000000});
+      }
+
+
+      function processdiceresult(diceresult){
+            console.log(diceresult)
+      }
       

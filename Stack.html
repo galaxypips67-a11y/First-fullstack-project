@@ -51,7 +51,8 @@
                <div class="CrapsRoundssection">Rounds: <span id="crapsroundsettings"></span></div>
             </div>
             <div class="Craps-Ontable-container">
-                  <div class="Craps-Rolldice-container non-selector">Roll dice <i class="fa-sharp-duotone fa-solid fa-dice"></i></div>
+                  <div class="Craps-Rolldice-container non-selector" onclick="Rolldice()" id="Craps-rolldice-nodisplay">Roll dice <i class="fa-sharp-duotone fa-solid fa-dice"></i></div>
+                  <div id="Craps-rolldice-animation-container"></div>
             </div>
             <div class="Crap-setup-Manager non-selector">
                <div class="Craps-betting-grid non-selector">
@@ -132,6 +133,7 @@ padding: 25px;
 </style>
 
 <script src="./CRAPS GAME/Crapsgame.js"></script>
+<script type="text/javascript" src="https://unpkg.com/roll-a-die@2.0.1/dist/roll-a-die.js"></script>
 <script>
 
    function GraceofGod () {
