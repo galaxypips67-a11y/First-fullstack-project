@@ -115,11 +115,22 @@ const rolldicenodisplay = "Craps-rolldice-nodisplay"
 
 
       function Rolldice(){
-         document.getElementById(rolldicenodisplay).style.display  = "none"
+         formatdicerolled()
+         document.getElementById(rolldicenodisplay).style.display = "none"
          const dicerollelement = document.getElementById(dicerollElements)
          rollADie({ element: dicerollelement, numberOfDice: 2, callback:processdiceresult, delay:10000000});
       }
 
+         
+
+      function formatdicerolled(){
+         const vw = window.innerWidth*0.8
+         const vh = window.innerHeight*0.8
+         const widthscale = Math.min(700,vw,vh)
+         const heightscale = widthscale * 0.714
+         const scale = heightscale/367.8528
+         document.getElementById(dicerollElements).style.transform = "scale(" + scale + ")"
+      }
 
       function processdiceresult(diceresult){
             console.log(diceresult)

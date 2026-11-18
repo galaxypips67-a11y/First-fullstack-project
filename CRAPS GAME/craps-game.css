@@ -1,5 +1,5 @@
 :root{
-    --width-scale-: min(700px, 80vw,80vh);
+    --width-scale-: min(700px,80vw,80vh);
     --height-scale-: calc(var(--width-scale-)*0.714);
     --crapstitle-: clamp(16px, calc(var(--height-scale-) * 0.06), 30px);
     --marginbottom-tittle: calc(var(--height-scale)*0.1);
@@ -79,7 +79,7 @@
 }
 
 .CrapsMoneyContainer{
-    margin-top:calc(var(--height-scale-)*0.09) ;
+    margin-top:calc(var(--height-scale-)*0.05) ;
     font-size:var(--crapstitle-)
 }
 
@@ -90,7 +90,7 @@
 }
 
 .Craps-Ontable-container{
-    margin-top: calc(var(--height-scale-)*0.12);
+    margin-top: calc(var(--height-scale-)*0.06);
     text-align: center;
     font-size: calc(var(--height-scale-)*0.04)
 
@@ -122,14 +122,14 @@
     display: grid;
     grid-template-columns: 33% auto 33%;
     width: 80%;
-    margin: 0 auto;
+    margin: calc(var(--height-scale-)*-0.01) auto;
     border: solid white 1px;
     border-radius: 4px;
 }
 
 
 .Craps-bet-button{
-    padding:calc(var(--height-scale-)*0.03);
+    padding:calc(var(--height-scale-)*0.01);
 }
 
 .Craps-bet-button:hover{
@@ -152,4 +152,10 @@
 .Craps-Betamount-change:hover{
     cursor: pointer;
     font-weight: bold;
+}
+
+
+#Craps-rolldice-animation-container{
+     margin-top: calc(var(--height-scale-)*-0.10);
+      margin-left: calc(var(--height-scale-)*-0.08);
 }
