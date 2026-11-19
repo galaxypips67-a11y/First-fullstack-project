@@ -19,7 +19,7 @@ let currentMoney = startingMoney
 let currentrounds = startingRounds //Runs when the Page loads for the first time
 let currentbets = bets.even
 let currentBetAmount = minimumBet
-
+let canchangeBet = true
 
 
 ///Graps HTML IDS
@@ -60,19 +60,19 @@ const rolldicenodisplay = "Craps-rolldice-nodisplay"
 
       function crapsgamesetting(){
          document.getElementById("CrapsUsercontainer").innerHTML =  crapsusername
-         currentMoney =startingMoney
-         currentrounds = startingRounds
-          setmoney(currentMoney)
-          setrounds(currentrounds)
+          setmoney(startingMoney)
+          setrounds( startingRounds)
           beteven()
            setbet(minimumBet)
       }
 
       function setmoney(money){
+         currentMoney = money
          document.getElementById("Moneycontainer").innerHTML = money
       }
 
       function setrounds(rounds){
+          currentrounds =rounds
          document.getElementById("crapsroundsettings").innerHTML = rounds
       }
       
@@ -88,11 +88,13 @@ const rolldicenodisplay = "Craps-rolldice-nodisplay"
       }
 
       function choosebet (bet){
-         currentbets = bet
+         if (canchangeBet){
+             currentbets = bet
          document.getElementById(currentbets).style.backgroundColor = "red"
-         
          const deselect = bet == bets.even ? bets.odd : bets.even
          document.getElementById(deselect).style.backgroundColor = "transparent"
+         }
+        
       }
 
 
@@ -107,14 +109,19 @@ const rolldicenodisplay = "Craps-rolldice-nodisplay"
       }
 
 
+
       function setbet(betmoney){
+         if (canchangeBet){
          currentBetAmount = betmoney
          document.getElementById(CrapsUserBetMoney).innerHTML= "$" + betmoney
+         }
+    
       }
 
 
 
       function Rolldice(){
+         canchangeBet = false
          formatdicerolled()
          document.getElementById(rolldicenodisplay).style.display = "none"
          const dicerollelement = document.getElementById(dicerollElements)
@@ -136,6 +143,16 @@ const rolldicenodisplay = "Craps-rolldice-nodisplay"
       }
 
       function processdiceresult(diceresult){
-            console.log(diceresult)
+         const sum = diceresult.reduce((partialSum, a) => partialSum + a, 0);
+          let diceResult = bets.even
+          if (sum % 2 === 1 ){
+            diceResult = bets.odd
+          }
+         setrounds(currentrounds + 1)
+          if(diceResult === currentbets){
+            setmoney(currentMoney + currentBetAmount)
+          }else{
+            setmoney(currentMoney - currentBetAmount)
+          }
       }
       
